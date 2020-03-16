@@ -1,6 +1,6 @@
 <?php
 
-$fullPrice = 8.5;
+$fullPrice = 9;
 $reducedPrice = 6.8;
 $childPrice = 4.6;
 
