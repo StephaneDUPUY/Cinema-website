@@ -1,3 +1,21 @@
+<?php
+
+  $fullPrice = 8.5;
+  $reducedPrice = 6.8;
+  $childPrice = 4.6;
+
+  $age = 83; // age to be checked
+
+  if ($age < 14) { // price for children
+    $price = $childPrice;
+  } elseif ($age < 16 || $age > 60) {
+    $price = $reducedPrice;
+  } else {
+    $price = $fullPrice;
+  }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,9 +44,9 @@
       <h2>Tarifs</h2>
       <div class="flex">
         <ul>
-          <li>Tarif Plein : 8,30 &euro;</li>
-          <li>Tarif Réduit : 6,80 &euro;</li>
-          <li>Tarif Enfant : 4,50 &euro;</li>
+          <li>Tarif Plein : <?=$fullPrice?> &euro;</li>
+          <li>Tarif Réduit : <?=$reducedPrice?> &euro;</li>
+          <li>Tarif Enfant : <?=$childPrice?> &euro;</li>
           <li>Supplément 3D : 1 &euro;</li>
         </ul>
         <ul>
@@ -42,10 +60,13 @@
       </p>
 
       <h2>Selon votre âge</h2>
+      <p>
+        <?="Pour vous qui avez $age ans, une place vous coûtera $price €"?>
+      </p>
     </section>
   </main>
   <footer>
     Cinéma Rodia - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
   </footer>
 </body>
-</html>
+</html> 
