@@ -41,9 +41,4 @@
         <?="Pour vous qui avez $age ans, une place vous coûtera $price €"?>
       </p>
     </section>
-  </main>
-  <footer>
-    Cinéma Rodia - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
-  </footer>
-</body>
-</html> 
+<?php include "partials/footer.tpl.php"?>
