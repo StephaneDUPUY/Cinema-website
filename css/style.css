@@ -70,7 +70,7 @@ footer {
     justify-content: space-between;
 }
 
-/* css for ads */
+/* for ads */
 #bandeau {
     text-align: center;
     background-color: black;
@@ -78,14 +78,28 @@ footer {
     font-weight: bold;
   }
 
-/* css for table */
+/* for table */
 table {
-border: 1px solid white;
-border-collapse: collapse;
+    border: 1px solid white;
+    border-collapse: collapse;
 }
 
 td, th {
-border: 1px solid white;
-padding: 3px;
-text-align: center;
+    border: 1px solid white;
+    padding: 3px;
+    text-align: center;
+}
+
+/* for broadcasting */
+.broadcast,
+.nobroadcast {
+    width: 2em;
+}
+
+.broadcast {
+  background-color: green;
+}
+
+.nobroadcast {
+  background-color: red;
 }
