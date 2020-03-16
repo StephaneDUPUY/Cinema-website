@@ -1,6 +1,6 @@
 <?php
 
-  include "data/tarifs.php";
+  include "data/prices.php";
 
 
   $pageName = "Tarifs";

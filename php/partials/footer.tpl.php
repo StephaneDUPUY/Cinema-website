@@ -1,6 +1,7 @@
 </main>
+<?php include "partials/ad.tpl.php"; ?>
 <footer>
-    Cinéma Rodia - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
+    Cinéma Stephane - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
   </footer>
 </body>
 </html>

@@ -1,16 +1,6 @@
 <?php
 
-$movies = [
-    'Les dents de la mer',
-    'Les goonies',
-    'Titanic',
-    'Star Wars 13',
-    'La Cité de la peur',
-    'Dikkenek',
-    'Vendredi 13',
-    'Interstellar',
-    'The Bureau'
-];
+include "data/movies.php";
 
 $pageName = "À l'affiche";
 include "partials/header.tpl.php";
