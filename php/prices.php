@@ -12,14 +12,14 @@
       <h2>Tarifs</h2>
       <div class="flex">
         <ul>
-          <li>Tarif Plein : <?=$fullPrice?> &euro;</li>
-          <li>Tarif Réduit : <?=$reducedPrice?> &euro;</li>
-          <li>Tarif Enfant : <?=$childPrice?> &euro;</li>
-          <li>Supplément 3D : 1 &euro;</li>
+          <?php foreach ($prices as $type => $price): ?>
+            <li><?=$type?> : <?=$price?> &euro;</li>
+          <?php endforeach; ?>
         </ul>
         <ul>
-          <li>Abonnement 5 places : -10%</li>
-          <li>Abonnement 5 places -25ans : -20%</li>
+          <?php foreach ($subscriptions as $type => $reduction): ?>
+            <li><?=$type?> : <?=$reduction?></li>
+          <?php endforeach; ?>
         </ul>
       </div>
       <p>
@@ -39,11 +39,11 @@
           <?php for ($age = 1; $age <= 99; $age++):
 
             if ($age < 14) { // child price
-              $price = $childPrice;
+              $price = $prices['Tarif Enfant'];
             } elseif ($age < 16 || $age > 60) {
-              $price = $reducedPrice;
+              $price = $prices['Tarif Réduit'];
             } else {
-              $price = $fullPrice;
+              $price = $prices['Tarif Plein'];
             }
 
             // price for 5 tickets
