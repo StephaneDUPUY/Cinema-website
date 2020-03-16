@@ -1,20 +1,11 @@
 <?php
-  
+
   include "data/tarifs.php";
 
-  $age = 83; // age to be checked
-
-  if ($age < 14) { // price for children
-    $price = $childPrice;
-  } elseif ($age < 16 || $age > 60) {
-    $price = $reducedPrice;
-  } else {
-    $price = $fullPrice;
-  }
 
   $pageName = "Tarifs";
   include "partials/header.tpl.php";
-  
+
 ?>
 
     <section id="tarifs">
@@ -38,7 +29,18 @@
 
       <h2>Selon votre âge</h2>
       <p>
-        <?="Pour vous qui avez $age ans, une place vous coûtera $price €"?>
+      <?php for ($age = 1; $age <= 99; $age++) {
+
+      if ($age < 14) { // child price
+        $price = $childPrice;
+      } elseif ($age < 16 || $age > 60) {
+        $price = $reducedPrice;
+      } else {
+        $price = $fullPrice;
+      }
+
+      echo "<p>Pour vous qui avez $age ans, une place vous coûtera $price €</p>".PHP_EOL;
+      } ?>
       </p>
     </section>
 <?php include "partials/footer.tpl.php"?>
