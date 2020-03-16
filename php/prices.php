@@ -13,7 +13,7 @@
       <div class="flex">
         <ul>
           <?php foreach ($prices as $type => $price): ?>
-            <li><?=$type?> : <?=$price?> &euro;</li>
+            <li><?=$type?> : <?=number_format($price, 2, ",", " ")?> &euro;</li>
           <?php endforeach; ?>
         </ul>
         <ul>
@@ -59,8 +59,8 @@
 
             <tr>
               <td><?=$age?> ans</td>
-              <td><?=$price?> €</td>
-              <td><?=$priceFive?> €</td>
+              <td><?=number_format($price, 2, ",", " ")?> €</td>
+              <td><?=number_format($priceFive, 2, ",", " ")?> €</td>
             </tr>
           <?php endfor; ?>
         </tbody>

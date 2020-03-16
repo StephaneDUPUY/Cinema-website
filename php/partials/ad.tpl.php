@@ -7,4 +7,4 @@
   $aleatoryIndex = mt_rand(0, count($movies) - 1);
   $aleatoryMovie = $movies[$aleatoryIndex];
 ?>
-<p id="bandeau">Ne ratez pas l'occasion de regarder <?=$aleatoryMovie?> dans notre cinéma pour seulement <?=$prices['Tarif Plein']?> €</p>
+<p id="bandeau">Ne ratez pas l'occasion de regarder <?=$aleatoryMovie?> dans notre cinéma pour seulement <?=number_format($prices['Tarif Plein'], 2, ",", " ")?> €</p>
