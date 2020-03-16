@@ -78,6 +78,14 @@ footer {
     font-weight: bold;
   }
 
-del {
-    text-decoration: line-through;
-  }
+/* css for table */
+table {
+border: 1px solid white;
+border-collapse: collapse;
+}
+
+td, th {
+border: 1px solid white;
+padding: 3px;
+text-align: center;
+}

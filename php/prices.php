@@ -28,19 +28,42 @@
       </p>
 
       <h2>Selon votre âge</h2>
-      <p>
-      <?php for ($age = 1; $age <= 99; $age++) {
 
-      if ($age < 14) { // child price
-        $price = $childPrice;
-      } elseif ($age < 16 || $age > 60) {
-        $price = $reducedPrice;
-      } else {
-        $price = $fullPrice;
-      }
+      <table>
+        <thead>
+          <th>Âge</th>
+          <th>Place unitaire</th>
+          <th>Abonnement 5 places</th>
+        </thead>
+        <tbody>
+          <?php for ($age = 1; $age <= 99; $age++):
 
-      echo "<p>Pour vous qui avez $age ans, une place vous coûtera $price €</p>".PHP_EOL;
-      } ?>
-      </p>
+            if ($age < 14) { // child price
+              $price = $childPrice;
+            } elseif ($age < 16 || $age > 60) {
+              $price = $reducedPrice;
+            } else {
+              $price = $fullPrice;
+            }
+
+            // price for 5 tickets
+            $priceFive = 5 * $price;
+
+            // reduction
+            if ($age < 25) {
+              $priceFive *= .8;
+            } else {
+              $priceFive *= .9;
+            }
+            ?>
+
+            <tr>
+              <td><?=$age?> ans</td>
+              <td><?=$price?> €</td>
+              <td><?=$priceFive?> €</td>
+            </tr>
+          <?php endfor; ?>
+        </tbody>
+      </table>
     </section>
 <?php include "partials/footer.tpl.php"?>
